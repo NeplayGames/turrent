@@ -5,14 +5,7 @@ using UnityEngine;
 public class WhenNear : TorretRotationInterface
 {
     private float _rotationTime = 10;
-    public WhenNear(DetermineDistance.PlayerState _playerState)
-    {
-        if(SetInitialInfoOnLazer != null)
-            SetInitialInfoOnLazer(_playerState);
-    }
-
-    public event Action<DetermineDistance.PlayerState> SetInitialInfoOnLazer;
-
+  
     public Quaternion TorretRotation(Vector3 playerPos, Transform torretTrans, float changeRangeOnRotation)
     {
        

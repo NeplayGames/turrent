@@ -54,11 +54,11 @@ public class DetermineDistance : MonoBehaviour
     {
         TorretRotationInterface torretRotationInterface;
         if (_playerState == PlayerState.far)        
-            torretRotationInterface = new WhenFar(_playerState);
+            torretRotationInterface = new WhenFar();
         else if (_playerState == PlayerState.near)        
-          torretRotationInterface = new WhenNear(_playerState);       
+          torretRotationInterface = new WhenNear();       
         else       
-            torretRotationInterface = new BeyondVision(_playerState);
+            torretRotationInterface = new BeyondVision();
 
         laserHandler.SetTorretRotationInterface(_playerState);
         _tempPlayerState = _playerState;

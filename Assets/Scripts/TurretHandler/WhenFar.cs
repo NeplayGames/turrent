@@ -3,12 +3,7 @@ using UnityEngine;
 
 public class WhenFar : TorretRotationInterface
 {
-    public event Action<DetermineDistance.PlayerState> SetInitialInfoOnLazer;
-    public WhenFar(DetermineDistance.PlayerState p)
-    {
-        if(SetInitialInfoOnLazer != null)
-            SetInitialInfoOnLazer(p);
-    }
+   
     public Quaternion TorretRotation(Vector3 playerPos,Transform torretTrans, float changeRangeOnRotation)
     {
         Vector3 direction = playerPos - torretTrans.position;
